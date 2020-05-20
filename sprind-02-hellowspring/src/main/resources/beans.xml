@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    使用Spring 创建对象-->
+    <bean id="hello" class="com.kuang.pojo.Hello">
+        <property name="str" value="Spring"></property>
+    </bean>
+    <!-- more bean definitions go here -->
+
+</beans>
