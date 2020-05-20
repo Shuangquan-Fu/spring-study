@@ -13,6 +13,7 @@
         <module>sprind-02-hellowspring</module>
         <module>spring-01-di</module>
         <module>spring-03-di</module>
+        <module>spring-04-Autowired</module>
     </modules>
 
     <dependencies>
