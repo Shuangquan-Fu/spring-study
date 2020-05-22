@@ -15,6 +15,7 @@
         <module>spring-03-di</module>
         <module>spring-04-Autowired</module>
         <module>spring-05-proxy</module>
+        <module>spring-06-aop</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+    ">
+
+
+<!--注册bea-->
+    <bean id="userService" class="com.kuang.service.UserServiceImpl"></bean>
+    <bean id="log" class="com.kuang.log.Log"></bean>
+    <bean id="afterLog" class="com.kuang.log.AfterLog"></bean>
+<!--使用Aop 需要导入约束-->
+<!--    <aop:config>-->
+<!--&lt;!&ndash;        需要切入点&ndash;&gt;-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.kuang.service.UserServiceImpl.*(..))"/>-->
+<!--        <aop:advisor advice-ref="log" pointcut-ref="pointcut"></aop:advisor>-->
+<!--        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"></aop:advisor>-->
+<!--    </aop:config>-->
+
+    <bean id="diy" class="com.kuang.diy.DiyPointCut"></bean>
+    <aop:config>
+        <aop:aspect ref="diy">
+            <aop:pointcut id="point" expression="execution(* com.kuang.service.UserServiceImpl.*(..))"/>
+            <aop:before method="before" pointcut-ref="point"></aop:before>
+            <aop:after method="after" pointcut-ref="point"></aop:after>
+        </aop:aspect>
+    </aop:config>
+</beans>
