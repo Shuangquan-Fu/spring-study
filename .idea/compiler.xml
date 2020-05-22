@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-01-ioc" />
-        <module name="sprind-02-hellowspring" />
+        <module name="spring-07-mybatis" />
+        <module name="spring-03-di" />
         <module name="spring-06-aop" />
         <module name="spring-05-proxy" />
         <module name="spring-04-Autowired" />
-        <module name="spring-03-di" />
+        <module name="sprind-02-hellowspring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
